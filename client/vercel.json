@@ -2,7 +2,7 @@
   "rewrites": [
     {
       "source": "/api/:path*",
-      "destination": "https://YOUR-HEROKU-APP.herokuapp.com/api/:path*"
+      "destination": "https://shoppingmall-demo-f532fa966b7c.herokuapp.com/api/:path*"
     }
   ]
 }
