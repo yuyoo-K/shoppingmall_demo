@@ -1,0 +1,471 @@
+/**
+ * 내 주문 목록(ORDERED) 페이지 — 미니멀 테이블 레이아웃
+ */
+
+.order-list-page {
+  width: 100%;
+  background: #fff;
+  color: #212529;
+}
+
+.order-list {
+  width: min(1100px, 100%);
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem 3rem;
+}
+
+.order-list__title {
+  margin: 0 0 1.75rem;
+  font-size: 1.1rem;
+  font-weight: 400;
+  letter-spacing: 0.35em;
+  text-align: center;
+  text-transform: uppercase;
+  color: #212529;
+}
+
+/* 주문 상태별 탭 (목록 테이블 위) */
+.order-list__tabs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.35rem 0.5rem;
+  margin: 0 0 1.75rem;
+  padding: 0 0 0.75rem;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.order-list__tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.5rem 0.85rem;
+  border: none;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
+  background: transparent;
+  font-size: 0.78rem;
+  color: #868e96;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.order-list__tab:hover {
+  color: #495057;
+}
+
+.order-list__tab--active {
+  color: #212529;
+  font-weight: 600;
+  border-bottom-color: #212529;
+}
+
+.order-list__tab-count {
+  min-width: 1.1rem;
+  padding: 0.1rem 0.35rem;
+  border-radius: 10px;
+  background: #f1f3f5;
+  font-size: 0.65rem;
+  font-weight: 500;
+  color: #495057;
+  text-align: center;
+}
+
+.order-list__tab--active .order-list__tab-count {
+  background: #212529;
+  color: #fff;
+}
+
+.order-list__table {
+  width: 100%;
+}
+
+.order-list__head,
+.order-list__row {
+  display: grid;
+  grid-template-columns: 9rem 4.5rem 1fr 5.5rem 3.5rem 6.5rem 9.5rem;
+  align-items: center;
+  gap: 0.5rem 0.75rem;
+  padding: 0.85rem 0.25rem;
+  border-bottom: 1px solid #e9ecef;
+  font-size: 0.72rem;
+  color: #495057;
+}
+
+.order-list__head {
+  border-top: 1px solid #e9ecef;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+.order-list__col {
+  min-width: 0;
+}
+
+.order-list__col--no {
+  text-align: left;
+}
+
+.order-list__col--img,
+.order-list__col--price,
+.order-list__col--qty,
+.order-list__col--order,
+.order-list__col--ship {
+  text-align: center;
+}
+
+.order-list__col--item {
+  text-align: left;
+}
+
+.order-list__date {
+  display: block;
+  font-size: 0.7rem;
+  color: #212529;
+  line-height: 1.4;
+}
+
+.order-list__id {
+  display: block;
+  margin-top: 0.15rem;
+  font-size: 0.68rem;
+  color: #868e96;
+}
+
+.order-list__thumb {
+  display: block;
+  width: 56px;
+  height: 56px;
+  margin: 0 auto;
+  object-fit: cover;
+  background: #f1f3f5;
+}
+
+.order-list__thumb--empty {
+  display: inline-block;
+}
+
+.order-list__item-name {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #212529;
+  line-height: 1.35;
+}
+
+.order-list__status-main {
+  display: block;
+  font-size: 0.72rem;
+  color: #212529;
+}
+
+.order-list__cancel-link {
+  display: inline-block;
+  margin-top: 0.35rem;
+  padding: 0;
+  border: none;
+  background: none;
+  font-size: 0.65rem;
+  color: #868e96;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.order-list__cancel-link:hover {
+  color: #495057;
+}
+
+.order-list__ship-status {
+  display: block;
+  font-size: 0.72rem;
+  color: #212529;
+}
+
+.order-list__ship-status--active {
+  color: #2f6f6f;
+}
+
+.order-list__tracking {
+  display: block;
+  margin-top: 0.35rem;
+  font-size: 0.62rem;
+  color: #868e96;
+  line-height: 1.4;
+}
+
+.order-list__reviews-btn {
+  display: block;
+  margin: 0.5rem auto 0;
+  padding: 0.35rem 0.85rem;
+  border: none;
+  background: #e9ecef;
+  font-size: 0.62rem;
+  letter-spacing: 0.06em;
+  color: #495057;
+  cursor: pointer;
+}
+
+.order-list__reviews-btn:hover {
+  background: #dee2e6;
+}
+
+.order-list__footer-label {
+  margin: 2.5rem 0 1.5rem;
+  font-size: 0.75rem;
+  text-align: center;
+  color: #868e96;
+}
+
+.order-list__nav {
+  text-align: center;
+}
+
+.order-list__nav-link {
+  font-size: 0.85rem;
+  color: #228be6;
+  text-decoration: none;
+}
+
+.order-list__nav-link:hover {
+  text-decoration: underline;
+}
+
+.order-list__state,
+.order-list__error {
+  padding: 2rem 1rem;
+  text-align: center;
+  font-size: 0.85rem;
+}
+
+.order-list__error {
+  color: #c92a2a;
+}
+
+/* 관리자 주문관리 — 컬럼 확장·액션 버튼 */
+.order-list-page--admin {
+  padding: 0;
+  background: transparent;
+}
+
+.order-list-page--admin .order-list {
+  width: 100%;
+  max-width: none;
+  padding: 0 0 2rem;
+}
+
+.admin-main--orders .admin-main__header {
+  margin-bottom: 1.25rem;
+}
+
+.order-list__table--admin .order-list__head,
+.order-list__table--admin .order-list__row {
+  grid-template-columns:
+    8rem 4rem 1fr 5rem 3rem 6.5rem 5.5rem 7.5rem minmax(7.5rem, 9rem);
+}
+
+.order-list__col--receiver {
+  text-align: center;
+  font-size: 0.68rem;
+}
+
+.order-list__receiver-name {
+  display: block;
+  color: #212529;
+}
+
+.order-list__receiver-meta {
+  display: block;
+  margin-top: 0.2rem;
+  color: #868e96;
+}
+
+.order-list__col--actions {
+  text-align: center;
+}
+
+.admin-order-list__status-field {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0.3rem;
+  width: 100%;
+  max-width: 8.5rem;
+  margin: 0 auto;
+}
+
+.admin-order-list__status-label {
+  font-size: 0.58rem;
+  color: #868e96;
+  text-align: left;
+}
+
+.admin-order-list__status-select {
+  width: 100%;
+  padding: 0.4rem 0.35rem;
+  border: 1px solid #dee2e6;
+  background: #fff;
+  font-size: 0.65rem;
+  color: #212529;
+  cursor: pointer;
+}
+
+.admin-order-list__status-select:hover:not(:disabled) {
+  border-color: #adb5bd;
+}
+
+.admin-order-list__status-select:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.admin-order-list__status-select:focus {
+  outline: none;
+  border-color: #212529;
+}
+
+.admin-order-list__error {
+  margin-bottom: 1rem;
+}
+
+/* 관리자 취소관리 — 취소일·상품상태 열 */
+.order-list__table--cancel .order-list__head,
+.order-list__table--cancel .order-list__row {
+  grid-template-columns:
+    8rem 4rem 1fr 5rem 3rem 6.5rem 5rem 4.5rem 4.5rem minmax(6.5rem, 8rem);
+}
+
+.order-list__col--cancel-date {
+  text-align: center;
+  font-size: 0.68rem;
+}
+
+.order-list__cancel-date {
+  color: #495057;
+}
+
+.order-list__col--item-status {
+  text-align: center;
+  font-size: 0.68rem;
+}
+
+.order-list__item-status {
+  color: #c92a2a;
+}
+
+.order-list__status-main--cancelled {
+  color: #c92a2a;
+}
+
+.order-list__item-option {
+  display: block;
+  margin-top: 0.2rem;
+  font-size: 0.62rem;
+  color: #868e96;
+}
+
+.admin-main--cancel .admin-main__header {
+  margin-bottom: 1.25rem;
+}
+
+@media (max-width: 900px) {
+  .order-list__tabs {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+  }
+
+  .order-list__head {
+    display: none;
+  }
+
+  .order-list__row {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      'no no'
+      'img item'
+      'price qty'
+      'order ship';
+    gap: 0.65rem;
+    padding: 1.25rem 0.5rem;
+  }
+
+  .order-list__col--no {
+    grid-area: no;
+  }
+  .order-list__col--img {
+    grid-area: img;
+    justify-self: start;
+  }
+  .order-list__col--item {
+    grid-area: item;
+  }
+  .order-list__col--price {
+    grid-area: price;
+    text-align: left;
+  }
+  .order-list__col--qty {
+    grid-area: qty;
+    text-align: right;
+  }
+  .order-list__col--order {
+    grid-area: order;
+    text-align: left;
+  }
+  .order-list__col--ship {
+    grid-area: ship;
+    text-align: right;
+  }
+
+  .order-list__table--admin .order-list__row {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      'no no'
+      'img item'
+      'price qty'
+      'receiver receiver'
+      'order ship'
+      'actions actions';
+  }
+
+  .order-list__table--admin .order-list__col--receiver {
+    grid-area: receiver;
+    text-align: left;
+  }
+
+  .order-list__table--admin .order-list__col--actions {
+    grid-area: actions;
+    text-align: left;
+  }
+
+  .order-list__table--cancel .order-list__row {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      'no no'
+      'img item'
+      'price qty'
+      'receiver receiver'
+      'cancel-date cancel-date'
+      'order item-status'
+      'actions actions';
+  }
+
+  .order-list__table--cancel .order-list__col--cancel-date {
+    grid-area: cancel-date;
+    text-align: left;
+  }
+
+  .order-list__table--cancel .order-list__col--item-status {
+    grid-area: item-status;
+    text-align: right;
+  }
+
+  .admin-order-list__status-field {
+    max-width: none;
+    margin: 0;
+  }
+}

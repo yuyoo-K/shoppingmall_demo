@@ -1,0 +1,484 @@
+/**
+ * 주문(결제) 페이지 스타일 — 장바구니·홈 mall-section 계열과 톤 맞춤
+ */
+
+.order-page {
+  width: 100%;
+  background: #fff;
+  color: #212529;
+}
+
+.order {
+  width: min(900px, 100%);
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem 4rem;
+}
+
+.order__nav {
+  margin-bottom: 1rem;
+}
+
+.order__back {
+  font-size: 0.9rem;
+  color: #228be6;
+  text-decoration: none;
+  text-underline-offset: 3px;
+}
+
+.order__back:hover {
+  text-decoration: underline;
+}
+
+.order__title {
+  margin: 0 0 0.35rem;
+  font-size: 1.75rem;
+  font-weight: 700;
+}
+
+.order__lead {
+  margin: 0 0 2rem;
+  font-size: 0.9rem;
+  color: #868e96;
+}
+
+.order__section {
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #eee;
+}
+
+.order__section:last-of-type {
+  border-bottom: none;
+}
+
+.order__section-title {
+  margin: 0 0 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.order__table-wrap {
+  overflow-x: auto;
+  border-top: 1px solid #212529;
+}
+
+.order__table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+}
+
+.order__table th,
+.order__table td {
+  padding: 0.85rem 0.5rem;
+  border-bottom: 1px solid #eee;
+  text-align: left;
+}
+
+.order__table th {
+  font-weight: 600;
+  background: #f8f9fa;
+}
+
+.order__table .order__col-qty,
+.order__table .order__col-amt {
+  text-align: center;
+  white-space: nowrap;
+}
+
+.order__option {
+  display: block;
+  margin-top: 0.35rem;
+  font-size: 0.75rem;
+  color: #868e96;
+}
+
+.order__summary {
+  margin-top: 1.25rem;
+  padding: 1.25rem;
+  background: #f8f9fa;
+  border-radius: 2px;
+}
+
+.order__summary-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.35rem 0;
+  font-size: 0.9rem;
+}
+
+.order__summary-row--discount .order__summary-value {
+  color: #c92a2a;
+}
+
+.order__summary-row--total {
+  margin-top: 0.5rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid #dee2e6;
+  font-weight: 700;
+}
+
+.order__summary-row--total .order__summary-value {
+  font-size: 1.25rem;
+  color: #228be6;
+}
+
+.order__hint {
+  margin: 0.25rem 0 0;
+  font-size: 0.75rem;
+  color: #868e96;
+}
+
+.order__fieldset {
+  display: grid;
+  gap: 1rem;
+}
+
+.order__grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+@media (max-width: 560px) {
+  .order__grid-2 {
+    grid-template-columns: 1fr;
+  }
+}
+
+.order__label {
+  display: block;
+  margin-bottom: 0.35rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.order__label-opt {
+  font-weight: 500;
+  color: #868e96;
+}
+
+.order__req {
+  color: #c92a2a;
+}
+
+.order__input {
+  width: 100%;
+  padding: 0.65rem 0.75rem;
+  border: 1px solid #dee2e6;
+  font-size: 0.9rem;
+  box-sizing: border-box;
+}
+
+.order__input:focus {
+  outline: none;
+  border-color: #228be6;
+}
+
+.order__textarea {
+  min-height: 4.5rem;
+  resize: vertical;
+}
+
+.order__actions {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0.75rem;
+  margin-top: 2rem;
+  max-width: 320px;
+}
+
+.order__submit {
+  padding: 1rem 2rem;
+  border: none;
+  background: #228be6;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.order__submit:hover:not(:disabled) {
+  background: #1c7ed6;
+}
+
+.order__submit:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.order__error {
+  margin: 0 0 1rem;
+  font-size: 0.85rem;
+  color: #c92a2a;
+}
+
+.order__success {
+  margin: 2rem 0;
+  padding: 1.5rem;
+  background: #ebfbee;
+  border: 1px solid #8ce99a;
+  border-radius: 4px;
+}
+
+.order__success-title {
+  margin: 0 0 0.5rem;
+  font-weight: 700;
+  font-size: 1.05rem;
+}
+
+.order__success-meta {
+  margin: 0 0 1rem;
+  font-size: 0.85rem;
+  color: #2b8a3e;
+}
+
+.order__success-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.order__link-btn {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border: 1px solid #228be6;
+  background: #fff;
+  color: #228be6;
+  font-size: 0.85rem;
+  text-decoration: none;
+}
+
+.order__link-btn--primary {
+  background: #228be6;
+  color: #fff;
+}
+
+.order__state {
+  padding: 2rem 1rem;
+  text-align: center;
+  color: #868e96;
+}
+
+/* 주문 완료 전용(/checkout/success) */
+.order-success-page {
+  margin: 1rem 0 2rem;
+  padding: 1.75rem;
+  background: #ebfbee;
+  border: 1px solid #8ce99a;
+  border-radius: 6px;
+}
+
+.order-success-page__headline {
+  margin: 0 0 1.25rem;
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #2b8a3e;
+  text-align: center;
+}
+
+.order-success-page__section {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid rgba(140, 233, 154, 0.6);
+}
+
+.order-success-page__section:last-of-type {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.order-success-page__section-title {
+  margin: 0 0 0.85rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #212529;
+}
+
+.order-success-page__dl {
+  margin: 0;
+}
+
+.order-success-page__row {
+  display: grid;
+  grid-template-columns: 7rem 1fr;
+  gap: 0.5rem 1rem;
+  padding: 0.4rem 0;
+  font-size: 0.9rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.order-success-page__row:last-child {
+  border-bottom: none;
+}
+
+.order-success-page__row dt {
+  margin: 0;
+  font-weight: 600;
+  color: #495057;
+}
+
+.order-success-page__row dd {
+  margin: 0;
+  color: #212529;
+}
+
+.order-success-page__amount {
+  font-weight: 700;
+  color: #228be6;
+}
+
+.order-success-page__items {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.order-success-page__item {
+  padding: 0.75rem 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  font-size: 0.9rem;
+}
+
+.order-success-page__item:last-child {
+  border-bottom: none;
+}
+
+.order-success-page__item-option {
+  display: block;
+  margin-top: 0.25rem;
+  font-size: 0.8rem;
+  color: #868e96;
+}
+
+.order-success-page__item-meta {
+  margin-top: 0.35rem;
+  font-size: 0.8rem;
+  color: #495057;
+}
+
+@media (max-width: 480px) {
+  .order-success-page__row {
+    grid-template-columns: 1fr;
+  }
+
+  .order-success-page__row dt {
+    padding-top: 0.35rem;
+  }
+}
+
+/* 주문 실패 전용(/checkout/failure) */
+.order-failure-page {
+  margin: 1rem 0 2rem;
+  padding: 1.75rem;
+  background: #fff5f5;
+  border: 1px solid #ffc9c9;
+  border-radius: 6px;
+}
+
+.order-failure-page__headline {
+  margin: 0 0 0.75rem;
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #c92a2a;
+  text-align: center;
+}
+
+.order-failure-page__detail {
+  margin: 0 0 1rem;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #495057;
+  text-align: center;
+}
+
+.order-failure-page__meta {
+  margin: 0 0 1rem;
+  padding: 0.75rem 1rem;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 4px;
+  font-size: 0.85rem;
+  color: #212529;
+}
+
+.order-failure-page__meta-note {
+  display: block;
+  margin-top: 0.35rem;
+  font-size: 0.78rem;
+  color: #868e96;
+}
+
+.order-failure-page__hint {
+  margin: 0 0 1.25rem;
+  font-size: 0.8rem;
+  color: #868e96;
+  text-align: center;
+}
+
+.order-failure-page__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  justify-content: center;
+}
+
+.order-failure-page__btn {
+  display: inline-block;
+  padding: 0.55rem 1rem;
+  border: 1px solid #dee2e6;
+  background: #fff;
+  color: #495057;
+  font-size: 0.85rem;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+.order-failure-page__btn:hover {
+  border-color: #adb5bd;
+  color: #212529;
+}
+
+.order-failure-page__btn--primary {
+  border-color: #228be6;
+  background: #228be6;
+  color: #fff;
+}
+
+.order-failure-page__btn--primary:hover {
+  background: #1c7ed6;
+  border-color: #1c7ed6;
+  color: #fff;
+}
+
+.order-failure-page__btn--ghost {
+  background: transparent;
+}
+
+.order-failure-page__pending-box {
+  margin: 1rem 0;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid #ffc9c9;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+.order-failure-page__pending-box .order-failure-page__btn {
+  margin-top: 0.75rem;
+}
+
+.order-failure-page__error {
+  margin-top: 0.5rem;
+  color: #c92a2a;
+  font-size: 0.8rem;
+}
+
+.order-failure-page__success {
+  margin: 0.75rem 0;
+  color: #2b8a3e;
+  font-size: 0.85rem;
+}

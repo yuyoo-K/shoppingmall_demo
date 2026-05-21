@@ -1,0 +1,18 @@
+# 의존성·빌드 산출물
+node_modules/
+dist/
+dist-ssr/
+
+# 비밀·로컬 환경 변수 (Heroku/Vercel 대시보드에서 설정)
+.env
+.env.local
+.env.*.local
+
+# 로그·OS
+*.log
+.DS_Store
+
+# 에디터 (선택적 로컬 설정)
+.vscode/*
+!.vscode/extensions.json
+.idea/
